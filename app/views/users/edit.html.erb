@@ -1,0 +1,23 @@
+<div class="container mx-auto" style="width: 400px;">
+  <h1 class="row mt-3">User info</h1>
+  <% if @user.errors.any? %>
+    <%= @user.errors.count %> error prohibited this obj from being saved:
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div class="row">
+    <%= form_with model: @user do |f| %>
+      <p>Name</p>
+      <%= f.text_field :name, class: 'edit_form form-control input-lg' %>
+      <p class="mt-3">Image</p>
+      <%= f.file_field :profile_image, accept: "image/*" %>
+      <p class="mt-3">Introduction</p>
+      <%= f.text_area :introduction, class: 'edit_form form-control input-lg' %>
+      <%= f.submit 'Update User', class: 'btn btn-secondary mt-3' %>
+    <% end %>
+  </div>
+</div>

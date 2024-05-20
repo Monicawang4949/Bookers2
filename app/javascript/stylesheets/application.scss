@@ -1,0 +1,28 @@
+@use '~bootstrap/scss/bootstrap';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #212529;
+}
+
+header p {
+  color: #FFFFFF;
+}
+
+.top_btn {
+  width: 450px ;
+}
+
+.edit_form {
+  width: 450px ;
+}
+
+.edit_user_btn ,
+.main_form {
+  width: 250px ;
+}
